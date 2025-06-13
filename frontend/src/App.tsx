@@ -9,6 +9,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import DashboardLayout from './components/DashboardLayout';
 import Dashboard from './pages/Dashboard';
 import ProductList from './pages/ProductList';
+import ProductForm from './pages/ProductForm';
 
 // Create a theme instance
 const theme = createTheme({
@@ -46,6 +47,16 @@ function App() {
                 <ProtectedRoute>
                   <DashboardLayout>
                     <ProductList />
+                  </DashboardLayout>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/products/new"
+              element={
+                <ProtectedRoute>
+                  <DashboardLayout>
+                    <ProductForm />
                   </DashboardLayout>
                 </ProtectedRoute>
               }
